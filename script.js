@@ -74,7 +74,7 @@ cardsContainer.addEventListener("click", (e) => {
             div[0].closest(".card-inner").classList.remove("flip");
             div[1].closest(".card-inner").classList.remove("flip");
             wrongAttempts++;
-            wrong.innerHTML = `wrongAttempts : ${wrongAttempts}`;
+            wrong.innerHTML = `wrong Attempts : ${wrongAttempts}`;
             document.getElementById("fail").play();
             // if wrong attemts equal 10
             if (wrongAttempts === 10) {
