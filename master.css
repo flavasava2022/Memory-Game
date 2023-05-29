@@ -2,24 +2,24 @@
   box-sizing: border-box;
 }
 body {
-  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-family: sans-serif;
+  background-color: #f0edd4;
 }
 
 .container {
   margin: 50px auto;
-  width: 600px;
+  max-width: 900px;
   border: solid 1px black;
   border-radius: 12px;
-  background-color: #fbf3e6;
+  background-color: #eccdb4;
 }
 .container .main {
-  background-color: #795548a6;
+  background-color: #fea1a1;
   border-bottom: 1px solid black;
   display: flex;
   border-radius: 12px 12px 0 0;
 }
 .container .main p {
-  /* padding: 10px; */
   flex: 5;
   text-align: start;
   margin-left: 10px;
@@ -29,6 +29,9 @@ body {
   flex: 4;
   text-align: end;
   padding: 20px;
+}
+.container .main .wrong {
+  text-align: center;
 }
 .container .cards-container {
   position: relative;
@@ -57,8 +60,7 @@ body {
 
 .container .cards-container .card {
   background-color: transparent;
-
-  border-radius: 7px;
+  border-radius: 12px;
   overflow: hidden;
 }
 
@@ -66,9 +68,8 @@ body {
   position: relative;
   width: 100%;
   height: 100%;
-  transition: transform 0.6s;
+  transition: transform 0.5s;
   transform-style: preserve-3d;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
   border: 1px solid black;
   cursor: pointer;
 }
@@ -81,7 +82,6 @@ body {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 .container .cards-container .card img {

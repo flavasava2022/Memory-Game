@@ -37,15 +37,13 @@ let checkData = [];
 
 cardsContainer.addEventListener("click", (e) => {
   // won the game
-  let nero = [];
+  let wonGame = [];
   cardInner.forEach((card) => {
     if (card.classList.contains("ok")) {
-      nero.push("true");
-      if (nero.length === 24) {
-        console.log(nero.length);
+      wonGame.push("true");
+      if (wonGame.length === 24) {
         msg.classList.add("msg");
         msgB.innerHTML = "You Won The Game 🎉🎉🎉🎉🎉🎉";
-        document.getElementById("won").play();
         console.log("won");
       }
     }
@@ -67,20 +65,17 @@ cardsContainer.addEventListener("click", (e) => {
           div[1].closest(".card-inner").style.pointerEvents = "none";
           div[0].closest(".card-inner").classList.add("ok");
           div[1].closest(".card-inner").classList.add("ok");
-          document.getElementById("won").play();
           // if cards are not identical
         } else {
           setTimeout(() => {
             div[0].closest(".card-inner").classList.remove("flip");
             div[1].closest(".card-inner").classList.remove("flip");
             wrongAttempts++;
-            wrong.innerHTML = `wrong Attempts : ${wrongAttempts}`;
-            document.getElementById("fail").play();
+            wrong.innerHTML = `wrongAttempts : ${wrongAttempts}`;
             // if wrong attemts equal 10
             if (wrongAttempts === 10) {
               msg.classList.add("msg");
               msgB.innerHTML = "You Lost 😢😢😢😢";
-              document.getElementById("fail").play();
             }
           }, 500);
         }

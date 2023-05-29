@@ -1,0 +1,10 @@
+@media (max-width: 600px) {
+  .container .cards-container {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(6, 60px);
+    gap: 5px;
+    padding: 10px;
+  }
+}
