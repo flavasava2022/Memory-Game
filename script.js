@@ -4,7 +4,7 @@ const timer = document.querySelector(".main .timer");
 const wrong = document.querySelector(".main .wrong");
 // create wrong attempts element
 let wrongAttempts = 0;
-wrong.innerHTML = `wrong Attempts : ${wrongAttempts}`;
+wrong.innerHTML = `wrong : ${wrongAttempts} / 10`;
 // create cards
 for (let i = 1; i <= 24; i++) {
   let html = `
@@ -71,7 +71,7 @@ cardsContainer.addEventListener("click", (e) => {
             div[0].closest(".card-inner").classList.remove("flip");
             div[1].closest(".card-inner").classList.remove("flip");
             wrongAttempts++;
-            wrong.innerHTML = `wrongAttempts : ${wrongAttempts}`;
+            wrong.innerHTML = `wrong : ${wrongAttempts} / 10`;
             // if wrong attemts equal 10
             if (wrongAttempts === 10) {
               msg.classList.add("msg");
